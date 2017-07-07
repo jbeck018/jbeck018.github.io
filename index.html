@@ -65,20 +65,41 @@ function toggle(input){
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Ever Accountable</title>
-    <?php
-      $path = $_SERVER['DOCUMENT_ROOT'];
-      $path .= "/includes/head.php";
-      include_once($path);
-    ?>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="YYSzetxiWrCgQQWhpjRkP2KZZ2dkNdch0do-opVbclc" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css" />
+<link rel="icon" href="/img/brand/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <?php
-      $path = $_SERVER['DOCUMENT_ROOT'];
-      $path .= "/includes/header.php";
-      include_once($path);
-    ?>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GB3T42"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+  <div class="confirmation">
+    <p>Message Sent &mdash; <a id="dismiss-notification">Dismiss</a></p>
+  </div>
+  <a href="/">
+    <img id="logo" src="/img/brand/logo.jpeg" alt="Ever Accountable Logo">
+  </a>
+  <span id="menu-toggle">&#9776;</span>
+  <nav>
+    <ul>
+      <a href="/individual-plan"><li>Individual Plan</li></a>
+      <a href="/family-plan"><li>Family Plan</li></a>
+      <a href="/pricing"><li>Pricing</li></a>
+      <!-- <a href="/about"><li>About</li></a> -->
+      <a href="/blog"><li>Blog</li></a>
+      <a target="_blank" href="https://home.everaccountable.com/userprofile/login/"><li>Log In</li></a>
+      <a id="sign-up" href="https://home.everaccountable.com/userprofile/register/"><li>Sign Up</li></a>
+    </ul>
+  </nav>
+</header>
+
+<div class="wrapper editable" id="wrapper">
+
 
     <div class="content-block bg-yellow1">
       <section>
