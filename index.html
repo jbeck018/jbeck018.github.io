@@ -1,20 +1,31 @@
 <!--
-Added to CSS:
-1. added li to font Styles
-2. Due to Javascript function and way the Div's interact with it, each expandable div needed to have it's own style added to it. The display:none overroad the css file and I couldn't think of a way to fix it.(not sure if you could fix that or not)
-3. Jon said to do 5% Opacity with the normal blue, however, the opacity function overrides everything in the Div. IT would be possible to do it with clever css, but the easier option was to assign the divs with a bg-color of #f5f8fc
-4. For the device section; rather than add new css, I simply overoad the current css to shrink the block around the buttons
+Notes:
+1. I didn't update the font to light in the col-3 section. I didn't feel it was necessary, but we can change it if you think it is a good idea.
+2. I updated the css for the expandable boxes with the following updates so that the css was cleaner:
+/* Expanded Divs */
+.expand-button {
+  padding-top: 5%;
+}
+.expand-block {
+  background-color: rgba(71,138,202,.05);
+}
 
-What I haven't done:
-updated sans to have light version like Jon suggested
-Justified all subtext (not sure if this necessary or not)
-Note: I left the review section blocked out; Jon has it in is design but we just took it off our current page so I didn't add it back.
+.expand-title {
+  font-size: 30px;
+}
+
+.open {
+  display: none;
+  padding-left: 15%;
+  padding-right: 15%
+}
+3. I'll check with Tyler on the filters section and download picture section to see what he says about them.
+4. I still believe that we should update the first section. When the "Learn More Button" is added it makes that section seem almost too large. If you disagree then don't worry about it.
 -->
 
 
 <!DOCTYPE html>
 <!--This script is used to pull a specific set of divs, and then iterate over them to open or close the blocks-->
-<!--NEED TO FIND A WAY TO ALTER WEDGE/VEE/FA ANGLE AFTER CLICK-->
 <script type="text/javascript">
 //Create a function that will take an input with an id respective to the block that will expand
   function expandBox(input, data){
@@ -65,38 +76,20 @@ function toggle(input){
 
 <html>
   <head>
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="YYSzetxiWrCgQQWhpjRkP2KZZ2dkNdch0do-opVbclc" />
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-<link rel="stylesheet" href="/css/styles.css" />
-<link rel="icon" href="/img/brand/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <title>Ever Accountable</title>
+    <?php
+      $path = $_SERVER['DOCUMENT_ROOT'];
+      $path .= "/includes/head.php";
+      include_once($path);
+    ?>
   </head>
   <body>
-  
-<header>
-  <div class="confirmation">
-    <p>Message Sent &mdash; <a id="dismiss-notification">Dismiss</a></p>
-  </div>
-  <a href="/">
-    <img id="logo" src="/img/brand/logo.jpeg" alt="Ever Accountable Logo">
-  </a>
-  <span id="menu-toggle">&#9776;</span>
-  <nav>
-    <ul>
-      <a href="/individual-plan"><li>Individual Plan</li></a>
-      <a href="/family-plan"><li>Family Plan</li></a>
-      <a href="/pricing"><li>Pricing</li></a>
-      <!-- <a href="/about"><li>About</li></a> -->
-      <a href="/blog"><li>Blog</li></a>
-      <a target="_blank" href="https://home.everaccountable.com/userprofile/login/"><li>Log In</li></a>
-      <a id="sign-up" href="https://home.everaccountable.com/userprofile/register/"><li>Sign Up</li></a>
-    </ul>
-  </nav>
-</header>
-
-<div class="wrapper editable" id="wrapper">
-
+    <?php
+      $path = $_SERVER['DOCUMENT_ROOT'];
+      $path .= "/includes/header.php";
+      include_once($path);
+    ?>
 
     <div class="content-block bg-yellow1">
       <section>
@@ -112,8 +105,8 @@ function toggle(input){
         </div>
 
         <!--Add Learn More Button for Expandable box -->
-        <br></br>
-        <div class = "center">
+
+        <div class = "center expand-button">
           <a class="accordian" href="#" onclick="expandBox('box1', 'arrow1');return false;"><p>Learn More <i id = "arrow1" class="fa fa-angle-down fa-lg"  ></i></p></a>
 
         </div>
@@ -121,9 +114,9 @@ function toggle(input){
     </div>
 
     <!-- New Div Section after Click -->
-    <div class="content-block" style="background-color: #f5f8fc">
-        <section id="box1" class="accordian open" style="display: none; padding-left: 180px; padding-right: 180px">
-          <h3 class="center" style="font-size: 30px">Accountability, Not Filters</h3>
+    <div class="content-block expand-block">
+        <section id="box1" class="accordian open">
+          <h3 class="center expand-title">Accountability, Not Filters</h3>
           <ul>
             <li>Filters are notoriously inconsistent: They are incapable of blocking 100% of content and cannot recognize nuance or context.</li>
             <li>Filters offer a temporary fix to pornography’s psychological and social damages; accountability provides a tool that is proven to help with the recovery process </li>
@@ -140,34 +133,34 @@ function toggle(input){
         <div class="clearfix">
           <div class="platform" style="padding-bottom: 25px">
             <a target="_blank" href="http://play.google.com/store/apps/details?id=com.everaccountable.android">
-              <img src="/img/platform/android.png" alt="Android">
+              <img src="/assets/img/platform/android.png" alt="Android">
             </a>
           </div>
           <div class="platform" style="padding-bottom: 25px">
             <a target="_blank" href="https://chrome.google.com/webstore/detail/ever-accountable-for-chro/mhpfiackdifhfjphkicjidjlnibkfgek">
-              <img src="/img/platform/chromeos.png" alt="ChromeOS">
+              <img src="/assets/img/platform/chromeos.png" alt="ChromeOS">
             </a>
           </div>
           <div class="platform" style="padding-bottom: 25px">
             <a target="_blank" href="https://www.amazon.com/EverAccountable-com-Ever-Accountable/dp/B008CISZPE/ref=sr_1_2?ie=UTF8&qid=1478709281&sr=8-2&keywords=ever+accountable">
-              <img src="/img/platform/amazon.png" alt="Amazon Kindle">
+              <img src="/assets/img/platform/amazon.png" alt="Amazon Kindle">
             </a>
           </div>
         </div>
         <div class="clearfix">
           <div class="platform" style="padding-bottom: 25px">
             <a target="_blank" href="https://s3-us-west-2.amazonaws.com/ever-accountable-windows-app/installer/everaccountable.exe">
-              <img src="/img/platform/windows.png" alt="Windows">
+              <img src="/assets/img/platform/windows.png" alt="Windows">
             </a>
           </div>
           <div class="platform" style="padding-bottom: 25px">
             <a target="_blank" href="https://itunes.apple.com/us/app/sunlight-browser-build-trust-with-accountability/id1074047778?mt=8">
-              <img src="/img/platform/ios.svg" alt="iOS">
+              <img src="/assets/img/platform/ios.svg" alt="iOS">
             </a>
           </div>
           <div class="platform" style="padding-bottom: 25px">
             <a target="_blank" href="https://ever-accountable-windows-app.s3.amazonaws.com/installer/EverAccountable.pkg">
-              <img src="/img/platform/macos.svg" alt="macOS">
+              <img src="/assets/img/platform/macos.svg" alt="macOS">
             </a>
           </div>
         </div>
@@ -211,25 +204,25 @@ function toggle(input){
     </div>
 
     <!-- New Div Section after Click -->
-    <div class="content-block" style="background-color: #f5f8fc">
-        <section id="box2" class="accordian open" style="display: none; padding-left: 180px; padding-right: 180px">
-          <h3 class="center" style="font-size: 30px">Device Compatibility</h3>
+    <div class="content-block expand-block">
+        <section id="box2" class="accordian open">
+          <h3 class="center expand-title">Device Compatibility</h3>
           <ul>
             <li>Ever Accountable works on all of your Android and Windows devices.</li>
             <li>For IOS, we use our proprietary browser, the Sunlight Browser, to monitor your iPhone, iPad, or iPod.</li>
             <li>Due to Apple’s security constraints, we can only report traffic in the Sunlight Browser. Apple does not allow for an external app to monitor all application data on their devices, so please follow our set-up guide for full accountability.</li>
           </ul>
         </section>
-        <section id="box3" class="accordian open" style="display: none; padding-left: 180px; padding-right: 180px">
-          <h3 class="center" style="font-size: 30px">Effective and Successful</h3>
+        <section id="box3" class="accordian open" >
+          <h3 class="center expand-title">Effective and Successful</h3>
           <ul>
             <li>Our application is secure and lightweight; it won’t drain your battery</li>
             <li>All of your applications will be monitored, even in those pesky incognito or private modes. For more information about compatibility see our <a href="/download">Device page</a>.</li>
             <li>We provide training to help you and your accountability partner navigate the process to a life without pornography.</li>
           </ul>
         </section>
-        <section id="box4" class="accordian open" style="display: none; padding-left: 180px; padding-right: 180px">
-          <h3 class="center" style="font-size: 30px">Our Reports</h3>
+        <section id="box4" class="accordian open">
+          <h3 class="center expand-title">Our Reports</h3>
           <ul>
             <li>Our reports are constantly updated and easy to understand with options to see more details if desired. </li>
             <li>We will tell you immediately about  questionable sites.</li>
@@ -260,22 +253,11 @@ function toggle(input){
       </section>
     </div>
 
-    
-    <!-- Drip -->
-    
-<script type="text/javascript">
-    var _dcq = _dcq || [];
-    var _dcs = _dcs || {};
-    _dcs.account = '7396844';
-
-    (function() {
-      var dc = document.createElement('script');
-      dc.type = 'text/javascript'; dc.async = true;
-      dc.src = '//tag.getdrip.com/7396844.js';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(dc, s);
-    })();
-  </script>
+    <?php
+      $path = $_SERVER['DOCUMENT_ROOT'];
+      $path .= "/includes/footer.php";
+      include_once($path);
+    ?>
 
   </body>
 </html>
