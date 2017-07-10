@@ -119,6 +119,24 @@ nav ul a:hover {
 
 }
 
+/* Expanded Divs */
+.expand-button {
+  padding-top: 5%;
+}
+.expand-block {
+  background-color: rgba(71,138,202,.05);
+}
+
+.expand-title {
+  font-size: 30px;
+}
+
+.open {
+  display: none;
+  padding-left: 15%;
+  padding-right: 15%
+}
+
 /* Content Blocks */
 
 section {
