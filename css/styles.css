@@ -11,6 +11,9 @@ form {
 
 .drip-content{
 	font-family: 'Open Sans', sans-serif !important;
+	seconds_before_popup:10 !important;
+	days_between_popup:10.0 !important;
+	days_between_popup_after_close:5.0 !important;
 }
 
 .drip-tab-container {
