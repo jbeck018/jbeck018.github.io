@@ -9,6 +9,10 @@ form {
   font-family: 'Open Sans', sans-serif !important; 
 }
 
+.drip-content{
+font-family: sans-serif !important;
+}
+
 /* Defaults & Global Styles */
 
 * {
