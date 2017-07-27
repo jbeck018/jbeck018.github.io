@@ -18,7 +18,7 @@ img {
   user-select: none;
 }
 
-h1, h2, h3, h4, h5, h6, p, label, textarea, input, button, span, ul, ol, a, li, label, input, .drip-tab-container{
+h1, h2, h3, h4, h5, h6, p, label, textarea, input, button, span, ul, ol, a, li, label, input, .drip-tab-container, .drip-content{
   font-family: 'Open Sans', sans-serif; /* Default Font */
 }
 
