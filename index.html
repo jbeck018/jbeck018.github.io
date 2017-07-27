@@ -1,5 +1,7 @@
 
 <!DOCTYPE html>
+<script src="jquery-3.2.1.min.js"></script>
+
 <!--This script is used to pull a specific set of divs, and then iterate over them to open or close the blocks-->
 <script type="text/javascript">
 //Create a function that will take an input with an id respective to the block that will expand
@@ -14,20 +16,26 @@
       if (name == input){
         if (expandable[x].style.display == 'block'){
           expandable[x].style.display = 'none';
+          $('html, body').animate({
+        scrollTop: $("#"+data).offset().top-400
+    }, 600);
         }else{
           expandable[x].style.display = 'block';
+//Scroll to newly opened div
+          $('html, body').animate({
+        scrollTop: $("#"+input).offset().top-160
+    }, 600);
         }
       }else{
         if (expandable[x].style.display =='block'){
           expandable[x].style.display = 'none';
         }else{
-
         }
         //call toggle function to flip angles
       }toggle(data);
     }
   }
-//The toggle function works just like the expandbox function, it just identifies the blocks state and manipulates the arrow.
+  //The toggle function works just like the expandbox function, it just identifies the blocks state and manipulates the arrow.
 function toggle(input){
   var arrows = document.getElementsByClassName('fa');
   var boxes = document.getElementsByClassName('open');
