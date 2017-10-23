@@ -1,323 +1,84 @@
-
 <!DOCTYPE html>
-<script src="jquery-3.2.1.min.js"></script>
-
-<!--This script is used to pull a specific set of divs, and then iterate over them to open or close the blocks-->
-<script type="text/javascript">
-//Create a function that will take an input with an id respective to the block that will expand
-  function expandBox(input, data){
-    //create a var expandable that collects a list of elements with class name accordian.
-    var expandable = document.getElementsByClassName('open');
-    //Make the list of elements iterable
-    for (var x=0; x<expandable.length; x++){
-      //create new var name that creates a list of id's from the list of elements
-      var name = expandable[x].getAttribute("id");
-      //iterate over ids and compare them to 'input'. If the input and block id match then toggle the block (inner if/else). Else, close all other blocks so that no two block are open at the same time. This last else will close any open blocks that don't match the input block.
-      if (name == input){
-        if (expandable[x].style.display == 'block'){
-          expandable[x].style.display = 'none';
-          $('html, body').animate({
-        scrollTop: $("#"+data).offset().top-400
-    }, 600);
-        }else{
-          expandable[x].style.display = 'block';
-//Scroll to newly opened div
-          $('html, body').animate({
-        scrollTop: $("#"+input).offset().top-160
-    }, 600);
-        }
-      }else{
-        if (expandable[x].style.display =='block'){
-          expandable[x].style.display = 'none';
-        }else{
-        }
-        //call toggle function to flip angles
-      }toggle(data);
-    }
-  }
-  //The toggle function works just like the expandbox function, it just identifies the blocks state and manipulates the arrow.
-function toggle(input){
-  var arrows = document.getElementsByClassName('fa');
-  var boxes = document.getElementsByClassName('open');
-  for (var i=0; i<arrows.length; i++){
-    var ids = arrows[i].id;
-    if (ids == input){
-      if (boxes[i].style.display == 'block'){
-        arrows[i].className = 'fa fa-angle-up fa-lg';
-      }else {
-        arrows[i].className = 'fa fa-angle-down fa-lg';
-      }
-    }else {
-      arrows[i].className = 'fa fa-angle-down fa-lg';
-    }
-  }
-}
-
-</script>
-<script src="https://use.fontawesome.com/17390e10f4.js"></script>
-
-
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Ever Accountable</title>
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="YYSzetxiWrCgQQWhpjRkP2KZZ2dkNdch0do-opVbclc" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="YYSzetxiWrCgQQWhpjRkP2KZZ2dkNdch0do-opVbclc" />
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfoloio</title>
 
-<link rel="stylesheet" href="/css/styles.css" />
-<link rel="icon" href="/img/brand/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Rock+Salt" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-<link rel="stylesheet" href="/css/styles.css" />
-<link rel="icon" href="/img/brand/favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <header>
-  <div class="confirmation">
-    <p>Message Sent &mdash; <a id="dismiss-notification">Dismiss</a></p>
-  </div>
-  <a href="/">
-    <img id="logo" src="/img/brand/logo.jpeg" alt="Ever Accountable Logo">
-  </a>
-  <span id="menu-toggle">&#9776;</span>
-  <nav>
-    <ul>
-      <a href="/individual-plan"><li>Individual Plan</li></a>
-      <a href="/family-plan"><li>Family Plan</li></a>
-      <a href="/pricing"><li>Pricing</li></a>
-      <!-- <a href="/about"><li>About</li></a> -->
-      <a href="/blog"><li>Blog</li></a>
-      <a target="_blank" href="https://home.everaccountable.com/userprofile/login/"><li>Log In</li></a>
-      <a id="sign-up" href="https://home.everaccountable.com/userprofile/register/"><li>Sign Up</li></a>
-    </ul>
-  </nav>
-</header>
+  <ul>
+    <p class="font1 left">Jacob Beck - Front-End Dev</p>
+    <li class="font1"><a href="#contact">Contact Me</a></li>
+    <li class="font1"><a href="#portfolio">My Work</a></li>
+    <li class="font1"><a href="#AboutMe">About Me</a></li>
+  </ul>
+</head>
+<body>
 
-<div class="wrapper editable" id="wrapper">
+  <section class="hero-img">
+    <div class="about-me">
+       <div id="AboutMe">
 
-
-    <div class="content-block bg-yellow1">
-      <section>
-        <h1>Ever Accountable is a powerful app designed to help you live above pornography.</h1>
-        <p class="sm-copy">Ever Accountable is not a filter. It monitors and reports your activity to your spouse, partner, or a trusted friend.</p>
-        <div class="center">
-          <a href="/individual-plan">
-            <button type="button" name="button">For Individuals</button>
-          </a>
-          <a href="/family-plan">
-            <button type="button" name="button">For Families</button>
-          </a>
-        </div>
-
-        <!--Add Learn More Button for Expandable box -->
-
-        <div class = "center expand-button">
-          <a class="accordian" href="#" onclick="expandBox('box1', 'arrow1');return false;"><p>Learn More <i id = "arrow1" class="fa fa-angle-down fa-lg"  ></i></p></a>
+        <h2 class="text-center">Hi! As you can see my name is Jacob. I am a budding Full-Stack Engineer. Look no further for web design, analytics, and database design/maintenence. I have experience with Python, Django, CSS, HTML5, Javascript, and so much more. Feel free to parouse some of my projects below. I look forward to working with you!</h2>
 
         </div>
-      </section>
     </div>
+  </section>
 
-    <!-- New Div Section after Click -->
-    <div class="content-block expand-block">
-        <section id="box1" class="accordian open">
-          <h3 class="center expand-title">Accountability, Not Filters</h3>
-          <ul>
-            <li>Filters are notoriously inconsistent: They are incapable of blocking 100% of content and cannot recognize nuance or context.</li>
-            <li>Filters offer a temporary fix to pornography’s psychological and social damages; accountability provides a tool that is proven to help with the recovery process </li>
-            <li>Filters are easy to circumnavigate and merely provide an illusion of safety for partners and parents.</li>
-            <li>Accountability is based on freedom, which is foundational to creating the habits that you need to be free of pornography.**</li>
-          </ul>
-        </section>
+  <section>
+    <div class="btm-fix center">
+
+      <h2 id="portfolio">Take a Look at Some of my projects</h2>
+
+      <div class="portfoliotext1 text-center">
+        <a class="projects" href="https://codepen.io/jbeck018/full/VKXkBy/"><div class="pf1"></div></a>
+        <a class="projects" href="https://codepen.io/jbeck018/pen/PKoXWm"><div class="pf2"></div></a>
+        <a class="projects" href="https://codepen.io/jbeck018/pen/BZXZXr"><div class="pf3"></div></a>
+      </div>
+
+      <div class="portfoliotext2 text-center">
+        <a class="projects" href="https://codepen.io/jbeck018/pen/weadQe"><div class="pf4"></div></a>
+        <a class="projects" href="https://codepen.io/jbeck018/pen/QgVZXp"><div class="pf5"></div></a>
+        <a class="projects" href="#"><div class="pf6"></div></a>
+      </div>
+
     </div>
+  </section>
 
+  <section>
+    <div class="buttons">
 
-<!--Added links for app downloads (copyed from download page-->
-    <div class="content-block">
-      <section class="sec-sm center" style="padding: 40px 25px">
-        <div class="clearfix">
-          <div class="platform" style="padding-bottom: 25px">
-            <a target="_blank" href="http://play.google.com/store/apps/details?id=com.everaccountable.android">
-              <img src="/img/platform/android.png" alt="Android">
-            </a>
+        <a href="#"><button class="button-size">Codepen<i class="fa fa-codepen" aria-hidden="true"></i></button></a>
+
+        <a href="https://github.com/jbeck018"><button class="button-size">Github<i class="fa fa-github" aria-hidden="true"></i></button></a>
+
+        <a href="https://www.linkedin.com/in/jacob-beck-43334198"><button class="button-size">LinkedIn<i class="fa fa-linkedin" aria-hidden="true"></i></button></a>
+
+    </div>
+  </section>
+
+    <section class="contact-bg">
+      <div class="contact-section">
+
+          <div class="col-2 text-center">
+            <u id="contact" class="contact-me">Contact Me:</u>
+            <p class="contact-me-text">Feel free to send me an email with any questions and I promise that I'll get back to you as soon as I can. I look forward to working with you!</p>
+            <p class="contact-me-text">P.S. Please don't spam me--I won't respond to your email if you do</p>
           </div>
-          <div class="platform" style="padding-bottom: 25px">
-            <a target="_blank" href="https://chrome.google.com/webstore/detail/ever-accountable-for-chro/mhpfiackdifhfjphkicjidjlnibkfgek">
-              <img src="/img/platform/chromeos.png" alt="ChromeOS">
-            </a>
-          </div>
-          <div class="platform" style="padding-bottom: 25px">
-            <a target="_blank" href="https://www.amazon.com/EverAccountable-com-Ever-Accountable/dp/B008CISZPE/ref=sr_1_2?ie=UTF8&qid=1478709281&sr=8-2&keywords=ever+accountable">
-              <img src="/img/platform/amazon.png" alt="Amazon Kindle">
-            </a>
-          </div>
-        </div>
-        <div class="clearfix">
-          <div class="platform" style="padding-bottom: 25px">
-            <a target="_blank" href="https://s3-us-west-2.amazonaws.com/ever-accountable-windows-app/installer/everaccountable.exe">
-              <img src="/img/platform/windows.png" alt="Windows">
-            </a>
-          </div>
-          <div class="platform" style="padding-bottom: 25px">
-            <a target="_blank" href="https://itunes.apple.com/us/app/sunlight-browser-build-trust-with-accountability/id1074047778?mt=8">
-              <img src="/img/platform/ios.svg" alt="iOS">
-            </a>
-          </div>
-          <div class="platform" style="padding-bottom: 25px">
-            <a target="_blank" href="https://ever-accountable-windows-app.s3.amazonaws.com/installer/EverAccountable.pkg">
-              <img src="/img/platform/macos.svg" alt="macOS">
-            </a>
+
+          <div class="col-2">
+            <form action="submit contact information">
+              <input type="text" placeholder="Name" required></input>
+              <input type="email" placeholder="Email Address" required></input>
+              <input type="text" placeholder="Phone Number" required></input>
+              <textarea class="textarea" placeholder="Message" required></textarea>
+              <input type="submit"></input>
+            </form>
           </div>
         </div>
       </section>
-    </div>
 
-
-    <div class="content-block bg-blue-t">
-      <section>
-        <h2>Why choose Ever Accountable?</h2>
-        <div class="col-3">
-          <img class="icon" src="/uploads/img/settings.svg" alt="Gears Icon">
-          <h3>Easy to Use</h3>
-          <p>Tired of drawn-out, complicated installs? Once you download Ever Accountable, just follow the prompts and you are all set!</p>
-
-          <!--Add New ExpandableBox -->
-          <a class="accordian" href="#" onclick="expandBox('box2', 'arrow2');return false;"><p>Learn More <i id = "arrow2" class="fa fa-angle-down fa-lg"></i></p></a>
-
-        </div>
-
-        <div class="col-3">
-          <img class="icon" src="/uploads/img/dove.svg" alt="Dove Icon">
-          <h3>Freedom From Temptation</h3>
-          <p>Ever Accountable lets you use all your favorite apps just like always. Now though, it's with help as you live above pornography!</p>
-
-          <!--Add New ExpandableBox -->
-          <a class="accordian" href="#" onclick="expandBox('box3', 'arrow3');return false;"><p>Learn More <i id = "arrow3" class="fa fa-angle-down fa-lg"></i></p></a>
-
-        </div>
-
-        <div class="col-3">
-          <img class="icon" src="/uploads/img/file.svg" alt="File Icon">
-          <h3>Simple, Accurate Reports</h3>
-          <p>Ever Accountable's weekly reports show all the key details in a clear, concise way. There's no guesswork here!</p>
-
-            <!--Add New ExpandableBox -->
-            <a class="accordian" href="#" onclick="expandBox('box4','arrow4');return false;"><p>Learn More <i id = "arrow4" class="fa fa-angle-down fa-lg"></i></p></a>
-
-        </div>
-      </section>
-    </div>
-
-    <!-- New Div Section after Click -->
-    <div class="content-block expand-block">
-        <section id="box2" class="accordian open">
-          <h3 class="center expand-title">Device Compatibility</h3>
-          <ul>
-            <li>Ever Accountable works on all of your Android and Windows devices.</li>
-            <li>For IOS, we use our proprietary browser, the Sunlight Browser, to monitor your iPhone, iPad, or iPod.</li>
-            <li>Due to Apple’s security constraints, we can only report traffic in the Sunlight Browser. Apple does not allow for an external app to monitor all application data on their devices, so please follow our set-up guide for full accountability.</li>
-          </ul>
-        </section>
-        <section id="box3" class="accordian open" >
-          <h3 class="center expand-title">Effective and Successful</h3>
-          <ul>
-            <li>Our application is secure and lightweight; it won’t drain your battery</li>
-            <li>All of your applications will be monitored, even in those pesky incognito or private modes. For more information about compatibility see our <a href="/download">Device page</a>.</li>
-            <li>We provide training to help you and your accountability partner navigate the process to a life without pornography.</li>
-          </ul>
-        </section>
-        <section id="box4" class="accordian open">
-          <h3 class="center expand-title">Our Reports</h3>
-          <ul>
-            <li>Our reports are constantly updated and easy to understand with options to see more details if desired. </li>
-            <li>We will tell you immediately about  questionable sites.</li>
-            <li>Our reports track all viewed content as well as time spent browsing. </li>
-          </ul>
-        </section>
-    </div>
-
-    <div class="content-block">
-      <section class="sec-sm">
-        <img src="/uploads/img/screenshots.jpg" alt="Screenshots">
-      </section>
-    </div>
-
-    <!-- <div class="content-block bg-blue-t">
-      <section>
-        <h2>Recent Reviews from our Users</h2>
-      </section>
-    </div> -->
-
-    <div class="content-block bg-yellow2">
-      <section>
-        <p class="lg-copy">Try Ever Accountable free for 14 days!</p>
-        <p class="sm-copy">No credit card required. No pressure.</p>
-        <div class="center">
-          <button type="button" name="button">Start Your Free Trial</button>
-        </div>
-      </section>
-    </div>
-
-    <?php
-      $path = $_SERVER['DOCUMENT_ROOT'];
-      $path .= "/includes/footer.php";
-      include_once($path);
-    ?>
-<footer>
-  <div class="footer-col-wrap">
-    <div class="footer-col">
-      <p class="footer-title">Ever Accountable</p>
-      <a href="/download" class="footer-link">Download App</a>
-      <a href="/legal" class="footer-link">Legal Notices</a>
-      <a href="/scholarship" class="footer-link">Scholarship</a>
-      <a target="_blank" class="footer-link" href="https://play.google.com/store/apps/details?id=com.everaccountable.android#details-reviews">App Reviews</a>
-    </div>
-    <div class="footer-col">
-      <p class="footer-title">Support</p>
-      <a href="/contact" class="footer-link">Contact Us</a>
-      <a href="/faq" class="footer-link">FAQs</a>
-      <a href="/accountability" class="footer-link">Accountability Training</a>
-    </div>
-    <div class="footer-col">
-      <a target="_blank" href="http://facebook.com/everaccountable">
-        <img src="/img/social/facebook.svg" alt="Facebook Logo" class="social">
-      </a>
-      <a target="_blank" href="http://twitter.com/everaccountable">
-        <img src="/img/social/twitter.svg" alt="Twitter Logo" class="social">
-      </a>
-      <a target="_blank" href="http://instagram.com/ever_accountable">
-        <img src="/img/social/instagram.svg" alt="Instagram Logo" class="social">
-      </a>
-    </div>
-  </div>
-  <div class="footer-inner">
-    <p>Copyright &copy; <?php echo date("Y");?> Ever Accountable - All Rights Reserved</p>
-  </div>
-</footer>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="/assets/js/scripts.js" charset="utf-8"></script>
-
-  <!--drip
-<!-- Drip -->
-<script type="text/javascript">
-  var _dcq = _dcq || [];
-  var _dcs = _dcs || {}; 
-  _dcs.account = '7396844';
-  
-  (function() {
-    var dc = document.createElement('script');
-    dc.type = 'text/javascript'; dc.async = true; 
-    dc.src = '//tag.getdrip.com/7396844.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(dc, s);
-  })();
-</script>
-  -->
-  </body>
+</body>
 </html>
