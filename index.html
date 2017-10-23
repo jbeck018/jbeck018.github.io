@@ -5,14 +5,21 @@
   <title>Portfoloio</title>
 
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Rock+Salt" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
+  <script src="https://use.fontawesome.com/0d9eb7bfa4.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  function clickedOn(input){
+    $('html, body').animate({
+        scrollTop: $("#"+input).offset().top
+    }, 1000);
+  }
+  </script>
   <ul>
     <p class="font1 left">Jacob Beck - Front-End Dev</p>
-    <li class="font1"><a href="#contact">Contact Me</a></li>
-    <li class="font1"><a href="#portfolio">My Work</a></li>
-    <li class="font1"><a href="#AboutMe">About Me</a></li>
+    <li class="font1"><a href="#" onclick="clickedOn('contact'); return false;">Contact Me</a></li>
+    <li class="font1"><a href="#" onclick="clickedOn('portfolio'); return false;">My Work</a></li>
+    <li class="font1"><a href="#" onclick="clickedOn('AboutMe'); return false;">About Me</a></li>
   </ul>
 </head>
 <body>
@@ -23,6 +30,9 @@
 
         <h2 class="text-center">Hi! As you can see my name is Jacob. I am a budding Full-Stack Engineer. Look no further for web design, analytics, and database design/maintenence. I have experience with Python, Django, CSS, HTML5, Javascript, and so much more. Feel free to parouse some of my projects below. I look forward to working with you!</h2>
 
+        <div class="btn-top">
+          <a href="#" onclick="clickedOn('contact'); return false;"><button>Get a Quote Today</button></a>
+        </div>
         </div>
     </div>
   </section>
@@ -50,11 +60,11 @@
   <section>
     <div class="buttons">
 
-        <a href="#"><button class="button-size">Codepen<i class="fa fa-codepen" aria-hidden="true"></i></button></a>
+        <a class="codepen" href="#"><button class="button-size">Codepen <i class="fa fa-codepen" aria-hidden="true"></i></button></a>
 
-        <a href="https://github.com/jbeck018"><button class="button-size">Github<i class="fa fa-github" aria-hidden="true"></i></button></a>
+        <a class="github" href="https://github.com/jbeck018"><button class="button-size">Github <i class="fa fa-github" aria-hidden="true"></i></button></a>
 
-        <a href="https://www.linkedin.com/in/jacob-beck-43334198"><button class="button-size">LinkedIn<i class="fa fa-linkedin" aria-hidden="true"></i></button></a>
+        <a class="linkedin" href="https://www.linkedin.com/in/jacob-beck-43334198"><button class="button-size">Linked <i class="fa fa-linkedin" aria-hidden="true"></i></button></a>
 
     </div>
   </section>
