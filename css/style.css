@@ -14,18 +14,30 @@ body, section, head {
 
 .about-me {
   overflow: auto;
+  width: 66.6666%;
+  float: left;
+}
+
+.about-me h2{
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  width: 75%;
+  float: left;
+  margin: 10% 0 5% 12%;
+}
+
+.port-img img{
+  width: 33.3333333%;
+  display: block;
 }
 
 .btn-top {
-  width: 100%;
-  float: left;
-  margin-bottom: 5%;
+  width: 33.3333%;
+  margin: 0 auto;
 }
 
 .btn-top button {
   padding: 10px 50px;
-  float: left;
-  margin-left: 20%;
   border-radius: 15px;
   border: none;
   font-size: 18px;
@@ -49,8 +61,8 @@ li{
   float: left;
 }
 
-.active {
-    background-color: #4CAF50;
+ul li a:hover {
+    background-color: #ff0000;
 }
 
 ul p {
@@ -77,14 +89,6 @@ h1 {
   margin-top: 40px;
   }
 
-.about-me h2{
-  font-family: 'Open Sans', sans-serif;
-  color: white;
-  width: 50%;
-  float: left;
-  margin: 10% 0 2.5% 10%;
-}
-
 h2 {
   font-family: 'Open Sans', sans-serif;
 }
@@ -94,8 +98,7 @@ h2 {
 }
 
 .hero-img {
-  background: url('/images/portfolio_bg.png');
-  background-size: cover;
+  background-color: rgb(43,133,143);
 }
 
 .portfoliotext1{
@@ -105,7 +108,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.portfoliotext2{
+.portfoliotext2, .portfoliotext3{
   width: 1000px;
   margin: 20px auto;
 }
@@ -210,7 +213,7 @@ input[type=text], input[type=email], textarea {
    margin-right: 10px;
  }
 
- .pf1, .pf2, .pf3, .pf4, .pf5, .pf6 {
+ .pf1, .pf2, .pf3, .pf4, .pf5, .pf6, .pf7, .pf8, .pf9 {
    margin-right: 15px;
    margin-bottom: 15px;
    width: 30%;
@@ -248,6 +251,21 @@ input[type=text], input[type=email], textarea {
   background-size: cover;
 }
 
+.pf7 {
+  background: url('/images/markup.png') no-repeat;
+  background-size: cover;
+}
+
+.pf8 {
+  background: url('/images/recipe.png') no-repeat;
+  background-size: cover;
+}
+
+.pf9 {
+  background: url('/images/simon.png') no-repeat;
+  background-size: cover;
+}
+
 .codepen button{
   background-color: black;
   color: white;
@@ -264,4 +282,64 @@ input[type=text], input[type=email], textarea {
   background-color: #007bb6;
   font-size: 20px;
   color: white;
+}
+
+@media (max-width: 800px) {
+
+  .left {
+    float: none;
+    text-align: center;
+  }
+
+  ul li {
+    float: none;
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .about-me {
+    overflow: auto;
+    width: 100%;
+    float: left;
+  }
+
+  .btn-top {
+    padding-bottom: 5%;
+  }
+
+  .port-img img{
+    width: 100%;
+  }
+
+  .portfoliotext1, .portfoliotext2, .portfoliotext3{
+    width: 100%;
+    margin-top: 0 auto 0 auto !important;
+  }
+
+  .pf1, .pf2, .pf3, .pf4, .pf5, .pf6, .pf7, .pf8, .pf9 {
+    width: 80%;
+    margin: 0 auto 0 auto !important;
+    height: 250px;
+    float: none;
+  }
+
+  .btm-fix {
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .button-size{
+    width: 80%;
+    margin: 0 auto 5px auto;
+  }
+
+  .col-2{
+    width: 90%;
+    margin: 0 auto;
+  }
+
 }
