@@ -4,7 +4,7 @@ html, body, section, head {
   overflow-x: hidden;
 }
 
-body {
+body, html {
   margin: 0;
 }
 
@@ -18,29 +18,12 @@ body, section, head {
   float: left;
 }
 
-.about-me h1{
-  font-family: 'Open Sans', sans-serif;
-  color: white;
-  width: 75%;
-  float: left;
-}
-
 .about-me h2{
   font-family: 'Open Sans', sans-serif;
   color: white;
   width: 75%;
   float: left;
-  margin: 10% 0 5% 12%;
-}
-
-.port-img img{
-  width: 33.3333333%;
-  display: block;
-}
-
-.btn-top {
-  width: 33.3333%;
-  margin: 0 auto;
+  margin: 15% 0 5% 12%;
 }
 
 .btn-top button {
@@ -50,6 +33,8 @@ body, section, head {
   font-size: 18px;
   background-color: #ff0000;
   color: white;
+  margin-bottom: 100px;
+  margin-left: 100px;
 }
 
 ul {
@@ -68,8 +53,13 @@ li{
   float: left;
 }
 
+ul li:hover {
+  background-color: #ff0000;
+  padding-bottom: 14px;
+}
+
 ul li a:hover {
-    background-color: #ff0000;
+    color: white;
 }
 
 ul p {
@@ -98,6 +88,7 @@ h1 {
 
 h2 {
   font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
 }
 
 .font1{
@@ -105,40 +96,35 @@ h2 {
 }
 
 .hero-img {
-  background-color: rgb(43,133,143);
+  background: url('/images/IMG_6721.JPG');
+  background-size: cover;
 }
 
-.portfoliotext1{
-  margin-top: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
-  margin-bottom: 20px;
+.chalkboard {
+  background-color: #fefdff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-.portfoliotext2, .portfoliotext3{
-  width: 1000px;
-  margin: 20px auto;
+.portfoliotext1, .portfoliotext2, .portfoliotext3{
+  width: 90%;
+  margin: 0 7.5% !important;
+  height: 150px;
 }
 
 .center {
   text-align: center !important;
 }
 
-.btm-fix {
-  margin-top: 5%;
-  padding-bottom: 45px;
-  margin-bottom: 22%;
-  margin-left: 3%;
-}
-
 #portfolio {
   margin-bottom: 5%;
+  margin-top: 50px;
 }
 
 .buttons {
   width: 90%;
   margin-left: 12.5%;
   margin-bottom: 5%;
+  margin-top: 100px;
 }
 
 .button-size{
@@ -224,53 +210,46 @@ input[type=text], input[type=email], textarea {
    margin-right: 15px;
    margin-bottom: 15px;
    width: 30%;
-   height: 162px;
+   height: 150px;
    float: left;
+   background-position: center !important;
+   background-size: contain !important;
  }
 
 .pf1 {
   background: url('/images/Quoatable.png') no-repeat;
-  background-size: cover;
 }
 
 .pf2 {
   background: url('/images/calculator.png') no-repeat;
-  background-size: cover;
 }
 
 .pf3 {
   background: url('/images/Twitch.png') no-repeat;
-  background-size: cover;
 }
 
 .pf4 {
   background: url('/images/weather.png') no-repeat;
-  background-size: cover;
 }
 
 .pf5 {
   background: url('/images/wikiviewer.png') no-repeat;
-  background-size: cover;
 }
 
 .pf6 {
   background: url('/images/Pomodoro.png') no-repeat;
-  background-size: cover;
 }
 
 .pf7 {
   background: url('/images/markup.png') no-repeat;
-  background-size: cover;
 }
 
 .pf8 {
   background: url('/images/recipe.png') no-repeat;
-  background-size: cover;
 }
 
 .pf9 {
   background: url('/images/simon.png') no-repeat;
-  background-size: cover;
 }
 
 .codepen button{
@@ -312,24 +291,22 @@ input[type=text], input[type=email], textarea {
     float: left;
   }
 
-  .btn-top {
-    padding-bottom: 5%;
-  }
-
-  .port-img img{
-    width: 100%;
+  .btn-top button {
+    margin: 20px auto 50px 40px;
   }
 
   .portfoliotext1, .portfoliotext2, .portfoliotext3{
     width: 100%;
-    margin-top: 0 auto 0 auto !important;
+    margin: 0 auto 0 auto !important;
   }
 
   .pf1, .pf2, .pf3, .pf4, .pf5, .pf6, .pf7, .pf8, .pf9 {
-    width: 80%;
-    margin: 0 auto 0 auto !important;
-    height: 250px;
+    width: 100%;
+    margin: 0 auto !important;
+    height: 125px;
     float: none;
+    background-size: contain;
+    background-position: center;
   }
 
   .btm-fix {
