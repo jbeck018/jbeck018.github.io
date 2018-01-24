@@ -1,14 +1,98 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width" /> 
-  <title>Portfoloio</title>
 
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <script src="https://use.fontawesome.com/0d9eb7bfa4.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<html>
+  <head>
+    <title>Portfoloio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/0d9eb7bfa4.js"></script>
+  </head>
+
+  <header>
+    <nav>
+      <p><a href="/">Jacob Beck - Front-End Dev</a></p>
+      <a href="#" id="menu-icon"><i class="fa fa-bars fa-2x" onclick="menu();return false;" aria-hidden="true"></i></a>
+      <ul id="toggle">
+        <li><a href="#" onclick="clickedOn('contact'); return false;">Contact Me</a></li>
+        <li><a href="/#portfolio">My Work</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    <section class="hero-img">
+      <div class="about-me">
+         <div id="AboutMe">
+            <h1 class="text-center">Making a great website is hard.<br /> Let me help you make the website of your dreams.</h1>
+
+            <div class="btn-top">
+              <a href="#" onclick="clickedOn('contact'); return false;"><button>I Need a Stellar Website</button></a>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="chalkboard">
+      <div class="centered">
+
+        <h2 id="portfolio" class="center">Take a Look at Some of my projects</h2>
+
+        <div class="portfoliotext1 centered">
+          <a class="projects" href="https://codepen.io/jbeck018/full/VKXkBy/"><div class="pf1"></div></a>
+          <a class="projects" href="https://codepen.io/jbeck018/pen/PKoXWm"><div class="pf2"></div></a>
+          <a class="projects" href="https://codepen.io/jbeck018/pen/BZXZXr"><div class="pf3"></div></a>
+        </div>
+
+        <div class="portfoliotext2 centered">
+          <a class="projects" href="https://codepen.io/jbeck018/pen/weadQe"><div class="pf4"></div></a>
+          <a class="projects" href="https://codepen.io/jbeck018/pen/QgVZXp"><div class="pf5"></div></a>
+          <a class="projects" href="https://codepen.io/jbeck018/full/rzOOrm/"><div class="pf6"></div></a>
+        </div>
+
+        <div class="portfoliotext3 centered">
+          <a class="projects" href="https://codepen.io/jbeck018/full/yorEOd/"><div class="pf7"></div></a>
+          <a class="projects" href="https://codepen.io/jbeck018/full/GOxEMe/"><div class="pf8"></div></a>
+          <a class="projects" href="https://codepen.io/jbeck018/full/eEGjyO/"><div class="pf9"></div></a>
+        </div>
+
+      </div>
+      <div class="buttons">
+
+          <a class="codepen" href="#"><button class="button-size">Codepen <i class="fa fa-codepen" aria-hidden="true"></i></button></a>
+
+          <a class="github" href="https://github.com/jbeck018"><button class="button-size">Github <i class="fa fa-github" aria-hidden="true"></i></button></a>
+
+          <a class="linkedin" href="https://www.linkedin.com/in/jacob-beck-43334198"><button class="button-size">Linked <i class="fa fa-linkedin" aria-hidden="true"></i></button></a>
+
+      </div>
+
+    </section>
+
+      <section class="contact-bg">
+        <div class="contact-section">
+
+            <div class="col-2 text-center">
+              <u id="contact" class="contact-me">Contact Me:</u>
+              <p class="contact-me-text">Feel free to send me an email with any questions and I promise that I'll get back to you as soon as I can. I look forward to working with you!</p>
+              <p class="contact-me-text">P.S. Please don't spam me--I won't respond to your email if you do</p>
+            </div>
+
+            <div class="col-2">
+              <form action="https://formspree.io/jacob.beck.018@gmail.com" method="post">
+                <input type="text" placeholder="Name" required></input>
+                <input type="email" placeholder="Email Address" required></input>
+                <input type="text" placeholder="Phone Number" required></input>
+                <textarea class="textarea" placeholder="Message" required></textarea>
+                <input type="submit"></input>
+              </form>
+            </div>
+          </div>
+        </section>
+  </body>
   <script type="text/javascript">
   function clickedOn(input){
     $('html, body').animate({
@@ -16,83 +100,10 @@
     }, 1000);
   }
   </script>
-  <ul id="toggle">
-    <p class="font1 left">Jacob Beck - Front-End Dev</p>
-    <li class="font1"><a href="#" onclick="clickedOn('contact'); return false;">Contact Me</a></li>
-    <li class="font1"><a href="#" onclick="clickedOn('portfolio'); return false;">My Work</a></li>
-    <li class="font1"><a href="#" onclick="clickedOn('AboutMe'); return false;">About Me</a></li>
-  </ul>
-</head>
-<body>
 
-  <section class="hero-img">
-    <div class="about-me">
-       <div id="AboutMe">
-          <h2 class="text-center">Making a great website is hard.<br /> Let me help you make the website of your dreams.</h2>
-
-          <div class="btn-top">
-            <a href="#" onclick="clickedOn('contact'); return false;"><button>I Need a Stellar Website</button></a>
-          </div>
-        </div>
-    </div>
-  </section>
-
-  <section class="chalkboard">
-    <div class="centered">
-
-      <h2 id="portfolio" class="center">Take a Look at Some of my projects</h2>
-
-      <div class="portfoliotext1 centered">
-        <a class="projects" href="https://codepen.io/jbeck018/full/VKXkBy/"><div class="pf1"></div></a>
-        <a class="projects" href="https://codepen.io/jbeck018/pen/PKoXWm"><div class="pf2"></div></a>
-        <a class="projects" href="https://codepen.io/jbeck018/pen/BZXZXr"><div class="pf3"></div></a>
-      </div>
-
-      <div class="portfoliotext2 centered">
-        <a class="projects" href="https://codepen.io/jbeck018/pen/weadQe"><div class="pf4"></div></a>
-        <a class="projects" href="https://codepen.io/jbeck018/pen/QgVZXp"><div class="pf5"></div></a>
-        <a class="projects" href="https://codepen.io/jbeck018/full/rzOOrm/"><div class="pf6"></div></a>
-      </div>
-
-      <div class="portfoliotext3 centered">
-        <a class="projects" href="https://codepen.io/jbeck018/full/yorEOd/"><div class="pf7"></div></a>
-        <a class="projects" href="https://codepen.io/jbeck018/full/GOxEMe/"><div class="pf8"></div></a>
-        <a class="projects" href="https://codepen.io/jbeck018/full/eEGjyO/"><div class="pf9"></div></a>
-      </div>
-
-    </div>
-    <div class="buttons">
-
-        <a class="codepen" href="#"><button class="button-size">Codepen <i class="fa fa-codepen" aria-hidden="true"></i></button></a>
-
-        <a class="github" href="https://github.com/jbeck018"><button class="button-size">Github <i class="fa fa-github" aria-hidden="true"></i></button></a>
-
-        <a class="linkedin" href="https://www.linkedin.com/in/jacob-beck-43334198"><button class="button-size">Linked <i class="fa fa-linkedin" aria-hidden="true"></i></button></a>
-
-    </div>
-
-  </section>
-
-    <section class="contact-bg">
-      <div class="contact-section">
-
-          <div class="col-2 text-center">
-            <u id="contact" class="contact-me">Contact Me:</u>
-            <p class="contact-me-text">Feel free to send me an email with any questions and I promise that I'll get back to you as soon as I can. I look forward to working with you!</p>
-            <p class="contact-me-text">P.S. Please don't spam me--I won't respond to your email if you do</p>
-          </div>
-
-          <div class="col-2">
-            <form action="submit contact information">
-              <input type="text" placeholder="Name" required></input>
-              <input type="email" placeholder="Email Address" required></input>
-              <input type="text" placeholder="Phone Number" required></input>
-              <textarea class="textarea" placeholder="Message" required></textarea>
-              <input type="submit"></input>
-            </form>
-          </div>
-        </div>
-      </section>
-
-</body>
+  <script type="text/javascript">
+    function menu(){
+      $('#toggle').toggle("slow");
+    }
+  </script>
 </html>
