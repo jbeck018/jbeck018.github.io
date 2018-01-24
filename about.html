@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Portfoloio</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script src="https://use.fontawesome.com/0d9eb7bfa4.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+</head>
+
+<header>
+  <nav>
+    <p><a href="/">Jacob Beck - Front-End Dev</a></p>
+    <a href="#" id="menu-icon"><i class="fa fa-bars fa-2x" onclick="menu();return false;" aria-hidden="true"></i></a>
+    <ul id="toggle">
+      <li><a href="#" onclick="clickedOn('contact'); return false;">Contact Me</a></li>
+      <li><a href="/#portfolio">My Work</a></li>
+      <li><a href="about.html">About Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<body>
+
+  <section class="hero-img-2">
+    <div class="about-me">
+       <div id="AboutMe">
+          <h1 class="text-center">The world is too big to waste time looking for another developer. </h1>
+          <h3 class="text-center">Whether it's HTML, CSS, JavaScript, or React, I can make you the website of your dreams.</h3>
+
+          <div class="btn-top">
+            <a href="#" onclick="clickedOn('contact'); return false;"><button>I Need a Stellar Website</button></a>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="chalkboard">
+  <div class="story">
+    <h3 class="center">A little bit about me</h3>
+      <div id="school">
+        <img class="left" src="/images/LSU.png"/>
+        <div class="left-block">
+          <p>I graduated from LSU in May 2014 with a degree in Interdisciplinary Studies focused on Math, Philosophy, and Religous Studies.</p>
+          <p>In addition to that degree, I have a Front-End Certificate from FreeCodeCamp and am currently working on data analysis and backend certifications.</p>
+        </div>
+      </div>
+      <div id="coding">
+        <img class="right" src="/images/coding.png"/>
+        <div class="right-block">
+          <p>I mainly code in HTML, CSS, and Javascript. However, I also have experience with ReactJS, Python, PHP, and, WordPress.</p>
+          <p>Most of my projects are in the HTML/CSS/JS stack, but a few you will find are in ReactJS</p>
+        </div>
+      </div>
+      <div id="experience">
+        <img class="left" src="/images/luggage.png"/>
+        <div class="left-block">
+          <p>Aside from my <a href="/#portfolio">portfolio</a>, I am currently the marketing Front-End Developer at <a href="https://everaccountable.com">Ever Accountable</a> as well as the business analyst for Marketing.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+    <section class="contact-bg">
+      <div class="contact-section">
+
+          <div class="col-2 text-center">
+            <u id="contact" class="contact-me">Contact Me:</u>
+            <p class="contact-me-text">Feel free to send me an email with any questions and I promise that I'll get back to you as soon as I can. I look forward to working with you!</p>
+            <p class="contact-me-text">P.S. Please don't spam me--I won't respond to your email if you do</p>
+          </div>
+
+          <div class="col-2">
+            <form action="https://formspree.io/jacob.beck.018@gmail.com" method="post">
+              <input type="text" placeholder="Name" required></input>
+              <input type="email" placeholder="Email Address" required></input>
+              <input type="text" placeholder="Phone Number" required></input>
+              <textarea class="textarea" placeholder="Message" required></textarea>
+              <input type="submit"></input>
+            </form>
+          </div>
+        </div>
+      </section>
+
+</body>
+<script type="text/javascript">
+  function menu(){
+    $('#toggle').toggle("slow");
+  }
+</script>
+<script type="text/javascript">
+function clickedOn(input){
+  $('html, body').animate({
+      scrollTop: $("#"+input).offset().top
+  }, 1000);
+}
+</script>
+</html>
