@@ -459,8 +459,8 @@ input[type=text], input[type=email], textarea {
     margin: 0 auto;
   }
 
-  .buttons {
-    margin-top: 20px;
+  .right-block, .left-block {
+    height: 250px;
   }
 
 }
