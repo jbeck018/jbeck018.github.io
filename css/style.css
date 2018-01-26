@@ -244,8 +244,10 @@ input[type=text], input[type=email], textarea {
 
 .contact-bg {
   background: url('/images/contactbg.jpeg');
-  background-size: cover;
+  background-attachment: fixed;
   background-position: 0 85%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .col-2{
@@ -367,7 +369,7 @@ input[type=text], input[type=email], textarea {
 }
 
 @media only screen and (max-device-width: 1024px) {
-    .hero-img, .hero-img-2 {
+    .hero-img, .hero-img-2, .contact-bg {
         background-attachment: scroll;
     }
 }
