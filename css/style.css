@@ -24,6 +24,10 @@ body, section, head {
   width: 100%;
 }
 
+iframe {
+  width: 100%;
+}
+
 h1 {
   font-family: 'Open Sans', sans-serif;
   font-size: 40px;
@@ -285,42 +289,6 @@ input[type=text], input[type=email], textarea {
    background-position: center !important;
    background-size: contain !important;
  }
-
-.pf1 {
-  background: url('/images/Quoatable.png') no-repeat;
-}
-
-.pf2 {
-  background: url('/images/calculator.png') no-repeat;
-}
-
-.pf3 {
-  background: url('/images/Twitch.png') no-repeat;
-}
-
-.pf4 {
-  background: url('/images/weather.png') no-repeat;
-}
-
-.pf5 {
-  background: url('/images/wikiviewer.png') no-repeat;
-}
-
-.pf6 {
-  background: url('/images/Pomodoro.png') no-repeat;
-}
-
-.pf7 {
-  background: url('/images/markup.png') no-repeat;
-}
-
-.pf8 {
-  background: url('/images/recipe.png') no-repeat;
-}
-
-.pf9 {
-  background: url('/images/simon.png') no-repeat;
-}
 
 .codepen button{
   background-color: black;
