@@ -24,8 +24,14 @@ body, section, head {
   width: 100%;
 }
 
-iframe {
+.iframe-container{
   width: 50%;
+  float: left;
+}
+
+iframe {
+  width: 100%;
+  margin: 0 auto;
 }
 
 h1 {
